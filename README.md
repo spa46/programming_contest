@@ -13,3 +13,6 @@
 - [BAEKJOON] 1644
 - [BAEKJOON] 2015
 - [CODEGROUND] 42
+
+### Two Pointer
+- [BAEKJOON] 1253 <-- Do It Again
