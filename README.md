@@ -1,4 +1,5 @@
 # programming
+##### BAEKJOON is Korean local programming contest site.
 
 ### BackTracking
 - [BAEKJOON] 15649
@@ -16,7 +17,22 @@
 - [CODEGROUND] 42
 
 ### Two Pointer
-- [BAEKJOON] 1253 <-- Do It Again
+- [BAEKJOON] 1253 <-- Solve It Again
 
 ### Sliding Window
 - [BAEKJOON] 12891
+
+### DFS
+- [BAEKJOON] 11724
+
+### BFS
+- [BAEKJOON] 2178
+
+### Greedy 
+##### priorityQ & heapQ
+- [BAEKJOON] 1744
+- [BAEKJOON] 1931(PriorityQ)
+
+### Number Theory
+Use *sieve of Eratosthenes*
+- [BAEKJOON] 1744 <-- Solve It Again
