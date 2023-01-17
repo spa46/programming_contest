@@ -34,5 +34,13 @@
 - [BAEKJOON] 1931(PriorityQ)
 
 ### Number Theory
-Use *sieve of Eratosthenes*
+
+**sieve of Eratosthenes**
 - [BAEKJOON] 1744 <-- Solve It Again
+
+**euler phi function**
+$$\varphi(n) = n\left( 1-\frac{1}{p_1} \right) \left( 1-\frac{1}{p_2}\right) ... \left( 1-\frac{1}{p_k} \right)$$
+
+**LCM (Least Common Multiple) and GCD (Greatest Common Divisor)**
+$$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
+
