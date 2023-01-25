@@ -45,8 +45,11 @@ $$\varphi(n) = n\left( 1-\frac{1}{p_1} \right) \left( 1-\frac{1}{p_2}\right) ...
 $$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
 
 
-### Union - Find
+### Graph
+#### Union - Find
 - [BAEKJOON] 1717
 - [BAEKJOON] 1976
 - [BAEKJOON] 1043
+
+#### Topological Order
 - [BAEKJOON] 2252
