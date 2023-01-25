@@ -32,4 +32,5 @@ if __name__ == '__main__':
         arr[a].append(b)
         v[b] += 1
 
-    print(topological_sort(arr, v))
+    ans = topological_sort(arr, v)
+    print(' '.join(map(str, ans)))
