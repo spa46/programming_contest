@@ -52,4 +52,5 @@ $$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
 - [BAEKJOON] 1043
 
 #### Topological Order
-- [BAEKJOON] 2252
+- [BAEKJOON] 1516
+- [BAEKJOON] 2252 <- Solve It Again
