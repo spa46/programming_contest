@@ -44,3 +44,9 @@ $$\varphi(n) = n\left( 1-\frac{1}{p_1} \right) \left( 1-\frac{1}{p_2}\right) ...
 **LCM (Least Common Multiple) and GCD (Greatest Common Divisor)**
 $$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
 
+
+### Union - Find
+- [BAEKJOON] 1717
+- [BAEKJOON] 1976
+- [BAEKJOON] 1043
+- [BAEKJOON] 2252
