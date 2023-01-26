@@ -31,22 +31,33 @@ if __name__ == '__main__':
 
             if v[j] == 0:
                 q.append([j, jt])
-    print(mtime)
+
     out = []
     out.append(mtime[j])
+    visited = [False] * (n + 1)
 
     q = deque()
     q.append([j, mtime[j]])
+    visited[j] = True
 
     cnt = 0
+
     while q:
-        i, it = q.pop()
+        # print('q:', list(q))
+        i, it = q.popleft()
 
         for j, jt in inv[i]:
-
+            # print('     visit:', j, jt)
             if mtime[i]-jt == mtime[j]:
                 cnt += 1
-                q.append([j,jt])
+
+                if visited[j]:
+                    continue
+
+                q.append([j, it-jt])
+                visited[j] = True
+                # print('HIT:', j)
+
 
     out.append(cnt)
     print(' '.join(map(str, out)))
