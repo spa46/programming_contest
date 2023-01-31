@@ -1,35 +1,34 @@
 from queue import PriorityQueue
 import sys
 
-c = '0abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 n = int(sys.stdin.readline())
-parents = [i for i in range(n)]
+parent = [i for i in range(n)]
+
 
 def find(e):
-    if e == parents[e]:
+    if e == parent[e]:
         return e
     else:
-        parents[e] = find(parents[e])
-        return parents[e]
+        parent[e] = find(parent[e])
+        return parent[e]
+
 
 def union(a, b):
     a = find(a)
     b = find(b)
 
     if a != b:
-        parents[b] = a
-        return True
+        parent[b] = a
 
-    return False
 
-def checkUnion(a, b):
-    a = find(a)
-    b = find(b)
+def checkUnion():
+    a = find(parent[0])
 
-    if a == b:
-        return True
+    for i in range(1, len(parent)):
+        if a != find(parent[i]):
+            return False
 
-    return False
+    return True
 
 if __name__ == '__main__':
 
@@ -43,43 +42,31 @@ if __name__ == '__main__':
     total = 0
     for i in range(n):
         for j in range(n):
-            arr[i][j] = c.index(arr[i][j])
+            if 'a' <= arr[i][j] <= 'z':
+                arr[i][j] = ord(arr[i][j]) - ord('a') + 1
+            elif 'A' <= arr[i][j] <= 'Z':
+                arr[i][j] = ord(arr[i][j]) - ord('A') + 27
+            else:
+                arr[i][j] = 0
+
             total += arr[i][j]
 
-            if arr[i][j] == 0 or (n > 1 and i == j):
-                arr[i][j] = sys.maxsize
-
-            q.put((arr[i][j], (i,j)))
-    # print(arr)
-
-    if q.qsize() == 1:
-        val, v = q.get()
-
-        if val == sys.maxsize:
-            print(0)
-            sys.exit()
+            if i != j and arr[i][j] != 0:
+                q.put((arr[i][j], (i,j)))
 
     i = 0
-    while not q.empty() and i<n:
+    w = 0
+    edges = 0
+    while not q.empty():
         val, v = q.get()
 
-        if val == sys.maxsize:
-            if q.qsize() == (n*n)-1:
-                print(-1)
-            else:
-                print(0)
-            sys.exit()
+        if find(v[0]) != find(v[1]):
+            union(v[0], v[1])
+            w += val
+            edges += 1
 
-        if union(v[0], v[1]):
-            total -= val
-
-        i+=1
-
-    for i in range(1, n):
-        if not checkUnion(parents[i-1], parents[i]):
-            print(-1)
-            sys.exit()
-
-    print(total)
-
-
+    if edges == n-1:
+        print(total - w)
+    else:
+        print(-1)
+    
