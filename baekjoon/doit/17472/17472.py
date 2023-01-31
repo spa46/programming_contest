@@ -18,20 +18,6 @@ def union(p, a, b):
 
     if a != b:
         p[b] = a
-        return True
-
-    return False
-
-def checkUnion(p):
-    lp = len(p)
-    a = find(p, p[1])
-    for i in range(2, lp):
-        b = find(p, p[i])
-        if a != b:
-            return False
-        a = b
-
-    return True
 
 
 def vertical_scan(varr, arr):
@@ -167,17 +153,19 @@ if __name__ == '__main__':
         print(-1)
         exit()
 
-
+    V = mark-1
     i = 1
     total = 0
-    while not q.empty() and i < mark:
+    edges = 0
+    while not q.empty():
         val, v = q.get()
 
-        if union(parent, v[0], v[1]):
+        if find(parent, v[0]) != find(parent, v[1]):
+            union(parent, v[0], v[1])
             total += val
-            # print(val, v)
+            edges += 1
 
-    if checkUnion(parent):
+    if edges == V-1:
         print(total)
     else:
         print(-1)
