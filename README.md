@@ -46,33 +46,33 @@ $$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
 
 
 ### Graph
-#### Union - Find
+#### Union - Find - *find nodeA is in a same group with nodeB*
 - [BAEKJOON] 1717
 - [BAEKJOON] 1976
 - [BAEKJOON] 1043
 
-#### Topological Order
+#### Topological Order - *find a node order in a directed graph when the graph has no cycle - O(V + E)
 - [BAEKJOON] 1516
 - [BAEKJOON] 2252 <- Solve It Again
 
-#### Minimum Spanning Tree
-- [BAEKJOON] 1197
-- [BAEKJOON] 1414 <- Solve It Again
-- [BAEKJOON] 17472 <- Solve It Again
-
-#### Dijkstra
+#### Dijkstra - Take shortest path (has non negative values) from start to end - O(E log V)
 - [BAEKJOON] 1753
 - [BAEKJOON] 1916
 - [BAEKJOON] 1854
 
-#### Bellman-Ford
+#### Bellman-Ford - Take shortest path from start to end (accept negative values and detect cycles) - O(VE)
 - [BAEKJOON] 11657
 - [BAEKJOON] 1219
 
-#### Floyd Warshall
+#### Floyd Warshall - Take shortest path from start to end (accept negative values and use dynamic programming) - O(V<sup>3</sup>)
 - [BAEKJOON] 1389
 - [BAEKJOON] 11404
 - [BAEKJOON] 11403
+
+#### Minimum Spanning Tree - graph without cycle, has N-1 edges
+- [BAEKJOON] 1197
+- [BAEKJOON] 1414 <- Solve It Again
+- [BAEKJOON] 17472 <- Solve It Again
 
 ### Tree
 - [BAEKJOON] 11725
