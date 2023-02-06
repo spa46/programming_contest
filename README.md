@@ -54,3 +54,33 @@ $$LCM(a,b) = \left( \frac{a * b}{gcd (a, b)} \right)$$
 #### Topological Order
 - [BAEKJOON] 1516
 - [BAEKJOON] 2252 <- Solve It Again
+
+#### Minimum Spanning Tree
+- [BAEKJOON] 1197
+- [BAEKJOON] 1414 <- Solve It Again
+- [BAEKJOON] 17472 <- Solve It Again
+
+#### Dijkstra
+- [BAEKJOON] 1753
+- [BAEKJOON] 1916
+- [BAEKJOON] 1854
+
+#### Bellman-Ford
+- [BAEKJOON] 11657
+- [BAEKJOON] 1219
+
+#### Floyd Warshall
+- [BAEKJOON] 1389
+- [BAEKJOON] 11404
+- [BAEKJOON] 11403
+
+### Tree
+- [BAEKJOON] 11725
+- [BAEKJOON] 1068
+
+#### Segmented Tree
+- [BAEKJOON] 2042
+- [BAEKJOON] 10868
+
+#### LCA (Least Common Ancestor)
+- [BAEKJOON] 11438
